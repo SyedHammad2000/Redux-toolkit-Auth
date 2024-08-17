@@ -21,9 +21,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const state = useSelector((state) => state.auth.user);
-  console.log(state);
   const name = state.name;
-  console.log(name);
 
   const handleLogin = (e) => {
     e.preventDefault();
