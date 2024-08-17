@@ -21,7 +21,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const state = useSelector((state) => state.auth.user);
-  const name = state.name;
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -36,6 +35,7 @@ const Login = () => {
       });
     }
     if (state.email == email && state.password == password) {
+  const name = state.name;
       const userInfo = {
         // i want spread operator
         name,
